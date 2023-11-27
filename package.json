@@ -1,230 +1,75 @@
 {
-    "name": "@types/node",
-    "version": "20.9.0",
-    "description": "TypeScript definitions for node",
-    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node",
-    "license": "MIT",
-    "contributors": [
-        {
-            "name": "Microsoft TypeScript",
-            "githubUsername": "Microsoft",
-            "url": "https://github.com/Microsoft"
-        },
-        {
-            "name": "Alberto Schiabel",
-            "githubUsername": "jkomyno",
-            "url": "https://github.com/jkomyno"
-        },
-        {
-            "name": "Alvis HT Tang",
-            "githubUsername": "alvis",
-            "url": "https://github.com/alvis"
-        },
-        {
-            "name": "Andrew Makarov",
-            "githubUsername": "r3nya",
-            "url": "https://github.com/r3nya"
-        },
-        {
-            "name": "Benjamin Toueg",
-            "githubUsername": "btoueg",
-            "url": "https://github.com/btoueg"
-        },
-        {
-            "name": "Chigozirim C.",
-            "githubUsername": "smac89",
-            "url": "https://github.com/smac89"
-        },
-        {
-            "name": "David Junger",
-            "githubUsername": "touffy",
-            "url": "https://github.com/touffy"
-        },
-        {
-            "name": "Deividas Bakanas",
-            "githubUsername": "DeividasBakanas",
-            "url": "https://github.com/DeividasBakanas"
-        },
-        {
-            "name": "Eugene Y. Q. Shen",
-            "githubUsername": "eyqs",
-            "url": "https://github.com/eyqs"
-        },
-        {
-            "name": "Hannes Magnusson",
-            "githubUsername": "Hannes-Magnusson-CK",
-            "url": "https://github.com/Hannes-Magnusson-CK"
-        },
-        {
-            "name": "Huw",
-            "githubUsername": "hoo29",
-            "url": "https://github.com/hoo29"
-        },
-        {
-            "name": "Kelvin Jin",
-            "githubUsername": "kjin",
-            "url": "https://github.com/kjin"
-        },
-        {
-            "name": "Klaus Meinhardt",
-            "githubUsername": "ajafff",
-            "url": "https://github.com/ajafff"
-        },
-        {
-            "name": "Lishude",
-            "githubUsername": "islishude",
-            "url": "https://github.com/islishude"
-        },
-        {
-            "name": "Mariusz Wiktorczyk",
-            "githubUsername": "mwiktorczyk",
-            "url": "https://github.com/mwiktorczyk"
-        },
-        {
-            "name": "Mohsen Azimi",
-            "githubUsername": "mohsen1",
-            "url": "https://github.com/mohsen1"
-        },
-        {
-            "name": "Nicolas Even",
-            "githubUsername": "n-e",
-            "url": "https://github.com/n-e"
-        },
-        {
-            "name": "Nikita Galkin",
-            "githubUsername": "galkin",
-            "url": "https://github.com/galkin"
-        },
-        {
-            "name": "Parambir Singh",
-            "githubUsername": "parambirs",
-            "url": "https://github.com/parambirs"
-        },
-        {
-            "name": "Sebastian Silbermann",
-            "githubUsername": "eps1lon",
-            "url": "https://github.com/eps1lon"
-        },
-        {
-            "name": "Thomas den Hollander",
-            "githubUsername": "ThomasdenH",
-            "url": "https://github.com/ThomasdenH"
-        },
-        {
-            "name": "Wilco Bakker",
-            "githubUsername": "WilcoBakker",
-            "url": "https://github.com/WilcoBakker"
-        },
-        {
-            "name": "wwwy3y3",
-            "githubUsername": "wwwy3y3",
-            "url": "https://github.com/wwwy3y3"
-        },
-        {
-            "name": "Samuel Ainsworth",
-            "githubUsername": "samuela",
-            "url": "https://github.com/samuela"
-        },
-        {
-            "name": "Kyle Uehlein",
-            "githubUsername": "kuehlein",
-            "url": "https://github.com/kuehlein"
-        },
-        {
-            "name": "Thanik Bhongbhibhat",
-            "githubUsername": "bhongy",
-            "url": "https://github.com/bhongy"
-        },
-        {
-            "name": "Marcin Kopacz",
-            "githubUsername": "chyzwar",
-            "url": "https://github.com/chyzwar"
-        },
-        {
-            "name": "Trivikram Kamat",
-            "githubUsername": "trivikr",
-            "url": "https://github.com/trivikr"
-        },
-        {
-            "name": "Junxiao Shi",
-            "githubUsername": "yoursunny",
-            "url": "https://github.com/yoursunny"
-        },
-        {
-            "name": "Ilia Baryshnikov",
-            "githubUsername": "qwelias",
-            "url": "https://github.com/qwelias"
-        },
-        {
-            "name": "ExE Boss",
-            "githubUsername": "ExE-Boss",
-            "url": "https://github.com/ExE-Boss"
-        },
-        {
-            "name": "Piotr Błażejewicz",
-            "githubUsername": "peterblazejewicz",
-            "url": "https://github.com/peterblazejewicz"
-        },
-        {
-            "name": "Anna Henningsen",
-            "githubUsername": "addaleax",
-            "url": "https://github.com/addaleax"
-        },
-        {
-            "name": "Victor Perin",
-            "githubUsername": "victorperin",
-            "url": "https://github.com/victorperin"
-        },
-        {
-            "name": "Yongsheng Zhang",
-            "githubUsername": "ZYSzys",
-            "url": "https://github.com/ZYSzys"
-        },
-        {
-            "name": "NodeJS Contributors",
-            "githubUsername": "NodeJS",
-            "url": "https://github.com/NodeJS"
-        },
-        {
-            "name": "Linus Unnebäck",
-            "githubUsername": "LinusU",
-            "url": "https://github.com/LinusU"
-        },
-        {
-            "name": "wafuwafu13",
-            "githubUsername": "wafuwafu13",
-            "url": "https://github.com/wafuwafu13"
-        },
-        {
-            "name": "Matteo Collina",
-            "githubUsername": "mcollina",
-            "url": "https://github.com/mcollina"
-        },
-        {
-            "name": "Dmitry Semigradsky",
-            "githubUsername": "Semigradsky",
-            "url": "https://github.com/Semigradsky"
-        }
-    ],
-    "main": "",
-    "types": "index.d.ts",
-    "typesVersions": {
-        "<=4.8": {
-            "*": [
-                "ts4.8/*"
-            ]
-        }
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-        "directory": "types/node"
-    },
-    "scripts": {},
-    "dependencies": {
-        "undici-types": "~5.26.4"
-    },
-    "typesPublisherContentHash": "a1b366d7b3bf1afaa88e038010565763e234c0e5fa8044db8b0d7c44995bfbf8",
-    "typeScriptVersion": "4.5",
-    "nonNpm": true
+  "name": "async",
+  "description": "Higher-order functions and common patterns for asynchronous code",
+  "version": "3.2.5",
+  "main": "dist/async.js",
+  "author": "Caolan McMahon",
+  "homepage": "https://caolan.github.io/async/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caolan/async.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caolan/async/issues"
+  },
+  "keywords": [
+    "async",
+    "callback",
+    "module",
+    "utility"
+  ],
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/core": "7.23.2",
+    "babel-minify": "^0.5.0",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-syntax-async-generators": "^6.13.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-register": "^6.26.0",
+    "babelify": "^10.0.0",
+    "benchmark": "^2.1.1",
+    "bluebird": "^3.4.6",
+    "browserify": "^17.0.0",
+    "chai": "^4.2.0",
+    "cheerio": "^0.22.0",
+    "es6-promise": "^4.2.8",
+    "eslint": "^8.6.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "fs-extra": "^11.1.1",
+    "jsdoc": "^3.6.2",
+    "karma": "^6.3.12",
+    "karma-browserify": "^8.1.0",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-mocha": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.0",
+    "karma-safari-launcher": "^1.0.0",
+    "mocha": "^6.1.4",
+    "native-promise-only": "^0.8.0-a",
+    "nyc": "^15.1.0",
+    "rollup": "^4.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-npm": "^2.0.0",
+    "rsvp": "^4.8.5",
+    "semver": "^7.3.5",
+    "yargs": "^17.3.1"
+  },
+  "scripts": {
+    "coverage": "nyc npm run mocha-node-test -- --grep @nycinvalid --invert",
+    "jsdoc": "jsdoc -c ./support/jsdoc/jsdoc.json && node support/jsdoc/jsdoc-fix-html.js",
+    "lint": "eslint --fix .",
+    "mocha-browser-test": "karma start",
+    "mocha-node-test": "mocha",
+    "mocha-test": "npm run mocha-node-test && npm run mocha-browser-test",
+    "test": "npm run lint && npm run mocha-node-test"
+  },
+  "license": "MIT",
+  "nyc": {
+    "exclude": [
+      "test"
+    ]
+  },
+  "module": "dist/async.mjs"
 }

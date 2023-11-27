@@ -1,15 +1,59 @@
-# Installation
-> `npm install --save @types/node`
+![Async Logo](https://raw.githubusercontent.com/caolan/async/master/logo/async-logo_readme.jpg)
 
-# Summary
-This package contains type definitions for node (https://nodejs.org/).
+![Github Actions CI status](https://github.com/caolan/async/actions/workflows/ci.yml/badge.svg)
+[![NPM version](https://img.shields.io/npm/v/async.svg)](https://www.npmjs.com/package/async)
+[![Coverage Status](https://coveralls.io/repos/caolan/async/badge.svg?branch=master)](https://coveralls.io/r/caolan/async?branch=master)
+[![Join the chat at https://gitter.im/caolan/async](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/caolan/async?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/async/badge?style=rounded)](https://www.jsdelivr.com/package/npm/async)
 
-# Details
-Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node.
+<!--
+|Linux|Windows|MacOS|
+|-|-|-|
+|[![Linux Build Status](https://dev.azure.com/caolanmcmahon/async/_apis/build/status/caolan.async?branchName=master&jobName=Linux&configuration=Linux%20node_10_x)](https://dev.azure.com/caolanmcmahon/async/_build/latest?definitionId=1&branchName=master) | [![Windows Build Status](https://dev.azure.com/caolanmcmahon/async/_apis/build/status/caolan.async?branchName=master&jobName=Windows&configuration=Windows%20node_10_x)](https://dev.azure.com/caolanmcmahon/async/_build/latest?definitionId=1&branchName=master) | [![MacOS Build Status](https://dev.azure.com/caolanmcmahon/async/_apis/build/status/caolan.async?branchName=master&jobName=OSX&configuration=OSX%20node_10_x)](https://dev.azure.com/caolanmcmahon/async/_build/latest?definitionId=1&branchName=master)| -->
 
-### Additional Details
- * Last updated: Tue, 07 Nov 2023 20:08:00 GMT
- * Dependencies: [undici-types](https://npmjs.com/package/undici-types)
+Async is a utility module which provides straight-forward, powerful functions for working with [asynchronous JavaScript](http://caolan.github.io/async/v3/global.html). Although originally designed for use with [Node.js](https://nodejs.org/) and installable via `npm i async`, it can also be used directly in the browser.  A ESM/MJS version is included in the main `async` package that should automatically be used with compatible bundlers such as Webpack and Rollup.
 
-# Credits
-These definitions were written by [Microsoft TypeScript](https://github.com/Microsoft), [Alberto Schiabel](https://github.com/jkomyno), [Alvis HT Tang](https://github.com/alvis), [Andrew Makarov](https://github.com/r3nya), [Benjamin Toueg](https://github.com/btoueg), [Chigozirim C.](https://github.com/smac89), [David Junger](https://github.com/touffy), [Deividas Bakanas](https://github.com/DeividasBakanas), [Eugene Y. Q. Shen](https://github.com/eyqs), [Hannes Magnusson](https://github.com/Hannes-Magnusson-CK), [Huw](https://github.com/hoo29), [Kelvin Jin](https://github.com/kjin), [Klaus Meinhardt](https://github.com/ajafff), [Lishude](https://github.com/islishude), [Mariusz Wiktorczyk](https://github.com/mwiktorczyk), [Mohsen Azimi](https://github.com/mohsen1), [Nicolas Even](https://github.com/n-e), [Nikita Galkin](https://github.com/galkin), [Parambir Singh](https://github.com/parambirs), [Sebastian Silbermann](https://github.com/eps1lon), [Thomas den Hollander](https://github.com/ThomasdenH), [Wilco Bakker](https://github.com/WilcoBakker), [wwwy3y3](https://github.com/wwwy3y3), [Samuel Ainsworth](https://github.com/samuela), [Kyle Uehlein](https://github.com/kuehlein), [Thanik Bhongbhibhat](https://github.com/bhongy), [Marcin Kopacz](https://github.com/chyzwar), [Trivikram Kamat](https://github.com/trivikr), [Junxiao Shi](https://github.com/yoursunny), [Ilia Baryshnikov](https://github.com/qwelias), [ExE Boss](https://github.com/ExE-Boss), [Piotr Błażejewicz](https://github.com/peterblazejewicz), [Anna Henningsen](https://github.com/addaleax), [Victor Perin](https://github.com/victorperin), [Yongsheng Zhang](https://github.com/ZYSzys), [NodeJS Contributors](https://github.com/NodeJS), [Linus Unnebäck](https://github.com/LinusU), [wafuwafu13](https://github.com/wafuwafu13), [Matteo Collina](https://github.com/mcollina), and [Dmitry Semigradsky](https://github.com/Semigradsky).
+A pure ESM version of Async is available as [`async-es`](https://www.npmjs.com/package/async-es).
+
+For Documentation, visit <https://caolan.github.io/async/>
+
+*For Async v1.5.x documentation, go [HERE](https://github.com/caolan/async/blob/v1.5.2/README.md)*
+
+
+```javascript
+// for use with Node-style callbacks...
+var async = require("async");
+
+var obj = {dev: "/dev.json", test: "/test.json", prod: "/prod.json"};
+var configs = {};
+
+async.forEachOf(obj, (value, key, callback) => {
+    fs.readFile(__dirname + value, "utf8", (err, data) => {
+        if (err) return callback(err);
+        try {
+            configs[key] = JSON.parse(data);
+        } catch (e) {
+            return callback(e);
+        }
+        callback();
+    });
+}, err => {
+    if (err) console.error(err.message);
+    // configs is now a map of JSON data
+    doSomethingWith(configs);
+});
+```
+
+```javascript
+var async = require("async");
+
+// ...or ES2017 async functions
+async.mapLimit(urls, 5, async function(url) {
+    const response = await fetch(url)
+    return response.body
+}, (err, results) => {
+    if (err) throw err
+    // results is now an array of the response bodies
+    console.log(results)
+})
+```
