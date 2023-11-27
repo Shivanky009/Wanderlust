@@ -1,75 +1,71 @@
 {
-  "name": "async",
-  "description": "Higher-order functions and common patterns for asynchronous code",
-  "version": "3.2.5",
-  "main": "dist/async.js",
-  "author": "Caolan McMahon",
-  "homepage": "https://caolan.github.io/async/",
+  "name": "core-js",
+  "version": "3.33.3",
+  "type": "commonjs",
+  "description": "Standard library",
+  "keywords": [
+    "ES3",
+    "ES5",
+    "ES6",
+    "ES7",
+    "ES2015",
+    "ES2016",
+    "ES2017",
+    "ES2018",
+    "ES2019",
+    "ES2020",
+    "ES2021",
+    "ES2022",
+    "ES2023",
+    "ECMAScript 3",
+    "ECMAScript 5",
+    "ECMAScript 6",
+    "ECMAScript 7",
+    "ECMAScript 2015",
+    "ECMAScript 2016",
+    "ECMAScript 2017",
+    "ECMAScript 2018",
+    "ECMAScript 2019",
+    "ECMAScript 2020",
+    "ECMAScript 2021",
+    "ECMAScript 2022",
+    "ECMAScript 2023",
+    "Map",
+    "Set",
+    "WeakMap",
+    "WeakSet",
+    "TypedArray",
+    "Promise",
+    "Observable",
+    "Symbol",
+    "Iterator",
+    "AsyncIterator",
+    "URL",
+    "URLSearchParams",
+    "queueMicrotask",
+    "setImmediate",
+    "structuredClone",
+    "polyfill",
+    "ponyfill",
+    "shim"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/caolan/async.git"
+    "url": "https://github.com/zloirock/core-js.git",
+    "directory": "packages/core-js"
   },
-  "bugs": {
-    "url": "https://github.com/caolan/async/issues"
-  },
-  "keywords": [
-    "async",
-    "callback",
-    "module",
-    "utility"
-  ],
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.16.5",
-    "@babel/core": "7.23.2",
-    "babel-minify": "^0.5.0",
-    "babel-plugin-add-module-exports": "^1.0.4",
-    "babel-plugin-istanbul": "^6.1.1",
-    "babel-plugin-syntax-async-generators": "^6.13.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-es2017": "^6.22.0",
-    "babel-register": "^6.26.0",
-    "babelify": "^10.0.0",
-    "benchmark": "^2.1.1",
-    "bluebird": "^3.4.6",
-    "browserify": "^17.0.0",
-    "chai": "^4.2.0",
-    "cheerio": "^0.22.0",
-    "es6-promise": "^4.2.8",
-    "eslint": "^8.6.0",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "fs-extra": "^11.1.1",
-    "jsdoc": "^3.6.2",
-    "karma": "^6.3.12",
-    "karma-browserify": "^8.1.0",
-    "karma-firefox-launcher": "^2.1.2",
-    "karma-mocha": "^2.0.1",
-    "karma-mocha-reporter": "^2.2.0",
-    "karma-safari-launcher": "^1.0.0",
-    "mocha": "^6.1.4",
-    "native-promise-only": "^0.8.0-a",
-    "nyc": "^15.1.0",
-    "rollup": "^4.2.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-npm": "^2.0.0",
-    "rsvp": "^4.8.5",
-    "semver": "^7.3.5",
-    "yargs": "^17.3.1"
-  },
-  "scripts": {
-    "coverage": "nyc npm run mocha-node-test -- --grep @nycinvalid --invert",
-    "jsdoc": "jsdoc -c ./support/jsdoc/jsdoc.json && node support/jsdoc/jsdoc-fix-html.js",
-    "lint": "eslint --fix .",
-    "mocha-browser-test": "karma start",
-    "mocha-node-test": "mocha",
-    "mocha-test": "npm run mocha-node-test && npm run mocha-browser-test",
-    "test": "npm run lint && npm run mocha-node-test"
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/core-js"
   },
   "license": "MIT",
-  "nyc": {
-    "exclude": [
-      "test"
-    ]
+  "author": {
+    "name": "Denis Pushkarev",
+    "email": "zloirock@zloirock.ru",
+    "url": "http://zloirock.ru"
   },
-  "module": "dist/async.mjs"
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node -e \"try{require('./postinstall')}catch(e){}\""
+  }
 }
